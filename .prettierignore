@@ -1,0 +1,20 @@
+# composer
+composer.lock
+vendor/
+
+# git
+.gitignore
+
+# node
+node_modules/
+package-lock.json
+
+# php
+.php
+
+# prettier
+.prettierignore
+
+# text
+LICENSE
+*.txt
