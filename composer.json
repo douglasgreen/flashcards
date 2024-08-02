@@ -14,18 +14,23 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.1",
-        "douglasgreen/utility": "dev-main"
+        "php": ">=8.1"
     },
     "require-dev": {
-        "phpstan/phpstan": "^1.11",
-        "rector/rector": "^1.2",
-        "symplify/easy-coding-standard": "^12.3"
+        "douglasgreen/config-setup": "dev-main",
+        "phpstan/phpstan": "^1.11.9",
+        "rector/rector": "^1.2.2",
+        "symplify/easy-coding-standard": "^12.3.4"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/douglasgreen/config-setup"
+        }
+    ],
     "scripts": {
         "lint": [
             "ecs",
-            "php-linter",
             "phpstan analyse",
             "rector --dry-run"
         ],
@@ -33,7 +38,7 @@
             "ecs --fix",
             "rector"
         ],
-        "post-install-cmd": "config-setup --pre-commit",
-        "post-update-cmd": "config-setup --pre-commit"
+        "post-install-cmd": "config-setup",
+        "post-update-cmd": "config-setup"
     }
 }
